@@ -1,0 +1,19 @@
+{
+  "name": "nodetest",
+  "description": "node test",
+  "main": "",
+  "authors": [
+    "wkl"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

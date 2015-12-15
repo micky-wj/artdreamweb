@@ -1,0 +1,27 @@
+@import 'bootstrap/bootstrap';
+
+//--------- components file -----------//
+@import 'components/nav';
+
+//--------- foundation file -----------//
+@import 'foundation/base';
+@import 'foundation/config';
+
+//--------- structures file -----------//
+@import 'structures/title-content-m';
+@import 'structures/footer';
+
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: $body--bg;
+}
+ul,
+li{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+a {
+  color: #00B7FF;
+}
