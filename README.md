@@ -2,6 +2,12 @@
  
 ## 音画官网重构
 
+### 目标
+
+1.响应式设计
+
+2.html，js，css模块区分明显，可维护性强。
+
 ### 启动
 > gulp
 
@@ -11,7 +17,7 @@
 
 ### 架构选择
 
-> express + swig+ sass + gulp ＋ bower
+> express + swig+ sass + gulp ＋ bower ＋ bootstrap
 
 辅助工具
 
