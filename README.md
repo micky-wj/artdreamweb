@@ -4,8 +4,9 @@
 ## 音画官网重构
 
 ### 启动
-gulp
-npm run start / node bin/www
+> gulp
+
+> npm run start / node bin/www
 
 ## node 测试
 
