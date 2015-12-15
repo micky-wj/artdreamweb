@@ -34,7 +34,7 @@ scss（css预处理，参考http://mvcss.ycnets.com/）
 
 	macros  == > 宏，html可架构话模块
 	
-		－structures	.html
+		－structures.html
 		
 	layout.html
 	
