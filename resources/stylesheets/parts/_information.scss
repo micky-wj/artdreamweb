@@ -1,0 +1,33 @@
+.artdream-info{
+	background: white;
+	.artdream-info-nav{
+	}
+	.artdream-info-content{
+		.title{
+			h2{
+				font-size: 24px;
+				height: 60px;
+				line-height: 60px;
+				font-family: "Microsoft YaHei";
+				color: rgb( 65, 65, 65 );
+				span{
+					font-size: 14px;
+					font-family: "Microsoft Tai Le";
+					color: rgb( 102, 102, 102 );
+				}
+			}
+		}
+		.content{
+			background: #fff;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			width: 100%
+		}
+		#report{
+			img,.finance{
+				height: 320px;
+				width: 231px;
+			}
+		}
+	}
+}

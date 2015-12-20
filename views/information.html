@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+{% include 'focus.html' %}
+
+<div class="container">
+	<div class="row artdream-info">
+		<div class="col-md-2 artdream-info-nav">
+			<div class="list-group">
+				<a href="#" class="list-group-item">年报财报</a>
+				<a href="#" class="list-group-item">管理制度</a>
+			</div>
+			<ul class="nav nav-pills nav-stacked">
+			  <li role="presentation" class="active"><a href="#report">年报财报</a></li>
+			  <li role="presentation"><a href="#regulation">管理制度</a></li>
+			</ul>
+		</div>
+		<div class="col-md-8 artdream-info-content">
+			<div class="row" id="report">
+				<div class="title">
+					<h2>年报财报<span>/ NIANBAOCAIBAO</span></h2>
+				</div>
+				<div class="content">
+					<div class="row">
+						<div class="col-md-6">
+							<img src="../images/information_ annals.jpg" alt="">
+						</div>
+						<div class="col-md-6">
+							<div class="finance"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="regulation">
+				<div class="title">
+					<h2>管理制度<span>/ GUANLIZHIDU</span></h2>
+				</div>
+				<div class="content">
+					<div class="row">
+						<div class="col-md-6">
+							<ul>
+								<li><a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>《音画梦想会议制度》</a></li>
+								<li><a href="">《音画梦想财务管理细则》</a></li>
+								<li><a href="">《音画梦想档案管理制度》</a></li>
+								<li><a href="">《音画梦想重大事项报告制度》</a></li>
+								<li><a href="">《音画梦想印章管理制度》</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<ul>
+								<li><a href="">《音画梦想信息披露制度》</a></li>
+								<li><a href="">《音画梦想绩效考核制度》</a></li>
+								<li><a href="">《音画梦想人力资源管理制度》</a></li>
+								<li><a href="">《音画梦想财务管理制度》</a></li>
+								<li><a href="">《音画梦想办公用品管理制度》</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}
