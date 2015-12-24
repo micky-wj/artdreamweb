@@ -1,15 +1,52 @@
-.artdream-info{
+.ad-info{
+	font-family: "Microsoft YaHei";
 	background: white;
-	.artdream-info-nav{
+	padding: 0;
+	width:100%;
+	position: relative;
+	.ad-info-nav{
+		position: absolute;
+		left:0;
+		top:100px;
+		width: 150px;
+		font-size: 16px;
+		li{
+			margin: 0;
+			a{
+				border-radius: 0;
+				color: #414141;
+				text-decoration: none;
+				background: #fff;
+			}
+			a:hover{
+				background: #fff;
+				color: #4fa3fb;
+			}
+		}
+		li.active{
+			background: #4fa3fb;
+			a{
+				background: #4fa3fb;
+				color: #fff;
+			}
+		}
+		span.glyphicon{
+			margin-right: 10px;
+		}
 	}
-	.artdream-info-content{
+	.ad-info-content{
 		.title{
+			height: 60px;
+			background: #eee;
+			line-height: 48px;
+			span.glyphicon{
+				font-size: 22px;
+				margin:0 10px 0 20px;
+			}
 			h2{
-				font-size: 24px;
-				height: 60px;
-				line-height: 60px;
-				font-family: "Microsoft YaHei";
+				font-size: 22px;
 				color: rgb( 65, 65, 65 );
+				display: inline-block;
 				span{
 					font-size: 14px;
 					font-family: "Microsoft Tai Le";
@@ -19,14 +56,30 @@
 		}
 		.content{
 			background: #fff;
-			padding-top: 80px;
-			padding-bottom: 80px;
-			width: 100%
+			padding: 30px 50px;
+			width: 100%;
 		}
 		#report{
-			img,.finance{
+			.annals,.finance{
 				height: 320px;
-				width: 231px;
+				width: 230px;
+				margin: auto;
+				margin-bottom:10px;
+				border: 2px solid #A0A0A0;
+				overflow: hidden;
+			}
+		}
+		#regulation{
+			li{
+				font-size: 16px;
+				line-height: 2em;
+				a{
+					color: #00499a;
+					text-decoration: none;
+				}
+				a:hover,a:active{
+					color: #f19715;
+				} 
 			}
 		}
 	}
