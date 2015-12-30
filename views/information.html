@@ -4,8 +4,8 @@
 {% include 'navbar.html' %}
 {% include 'focus.html' %}
 <div class="container ad-info">
-	<div class="ad-info-nav hidden-xs">
-		<ul class="nav nav-pills nav-stacked" id="navbar-example">
+	<div class="ad-info-nav hidden-xs ad-nav-scroll">
+		<ul class="nav nav-pills nav-stacked" id="navbar-example ad-nav-spy">
 		  <li role="presentation" class="active"><a href="#report"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>年报财报</a></li>
 		  <li role="presentation"><a href="#regulation"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>管理制度</a></li>
 		</ul>
@@ -24,14 +24,15 @@
 				<div class="row">
 					<div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2">
 						<div class="annals">
-							<img src="../images/information_annals.png" alt="annals download">
+							<img class="annals-img" src="../images/information_annals.png" alt="annals download">
+							<div class="annals-caption"><a href="../docs/annals.pdf">点击下载音画年报</a></div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-5">
 						<div class="finance">
-							<img src="../images/information_finance.png" alt="finance download">
+							<img class="finance-img" src="../images/information_finance.png" alt="finance download">
+							<div class="finance-caption">音画年报，敬请期待</div>
 						</div>
-						<!-- <div class="finance">音画年报，敬请期待</div> -->
 					</div>
 				</div>
 			</div>

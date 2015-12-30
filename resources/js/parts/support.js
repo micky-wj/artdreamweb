@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$(".ad-nav-spy").affix({
+        offset: { 
+            top: $(".container").offset().top-100
+     	}
+    });
+
 	var containerCenter = $('.ad-sup-project-carousel').width()/2;
 	$(".ad-sup-project-carousel").CloudCarousel({			
 		xPos:containerCenter,
@@ -48,4 +54,5 @@ $(document).ready(function(){
 	  	e.preventDefault()
 	  	$(this).tab('show')
 	});
+	$('[data-toggle="tooltip"]').tooltip();
 });

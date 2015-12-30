@@ -1,4 +1,14 @@
-// $('.artdream-info-content').scrollspy({ target: '#navbar-example' });
-// $('[data-spy="scroll"]').each(function () {
-//   var $spy = $(this).scrollspy('refresh')
-// })
+$(document).ready(function(){
+	$(".annals").on("mouseenter",function(){
+		$(".annals-caption").slideDown();
+	});
+	$(".annals").on("mouseleave",function(){
+		$(".annals-caption").slideUp();
+	});
+	$(".finance").on("mouseenter",function(){
+		$(".finance-caption").slideDown();
+	});
+	$(".finance").on("mouseleave",function(){
+		$(".finance-caption").slideUp();
+	});
+});

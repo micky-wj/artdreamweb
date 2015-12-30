@@ -6,8 +6,8 @@
 {% include 'focus.html' %}
 
 <div class="container ad-sup">
-	<div class="ad-sup-nav hidden-xs">
-		<ul class="nav nav-pills nav-stacked">
+	<div class="ad-sup-nav hidden-xs ad-nav-scroll">
+		<ul class="nav nav-pills nav-stacked ad-nav-spy">
 			<li role="presentation" class="active"><a href="#donate"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>个人捐赠</a></li>
 			<li role="presentation"><a href="#project"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>项目合作</a></li>
 			<li role="presentation"><a href="#enterprise"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>企业资助</a></li>
@@ -94,21 +94,29 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">捐款金额</div>
 							<div class="panel-body">
-								<img src="../images/support_donation_money.png">
-								<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-
-								<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-
-								<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-
-								<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-								1元，认购音画梦想一年电子刊物，我们会每半年给您邮箱寄去音画梦想电子刊物
-								150元，认购一个孩子的音乐/美术课程，我们会给您寄去您所资助的孩子的作品集感谢信
-								300元，认购一个孩子的舞蹈课程，我们会给您寄去您所资助的孩子的感谢信
-								600元，认购一个孩子的摄影课程，我们会给您寄去您所资助的孩子的作品及感谢信
-								4000元，认购100个孩子音乐/美术/舞蹈课程或是10个孩子的摄影课程，成为音画梦想vip俱乐部会员，更有机会参与音画梦想举办的13人the genius真人游戏当中。
-								请在捐赠后，将您的姓名，捐赠截图及联系方式（包括手机、邮箱）发送至xingchen.wang@artdreamchina.org，以便于我们更快地与您联系。
-
+								<div class="hidden-xs">
+									<img src="../images/support_donation_money.png">
+									<button type="button" class="money-1 btn btn-primary" data-toggle="tooltip" data-placement="left" title="1元，认购音画梦想一年电子刊物，我们会每半年给您邮箱寄去音画梦想电子刊物">1 元</button>
+									<button type="button" class="money-150 btn btn-primary" data-toggle="tooltip" data-placement="left" title="150元，认购一个孩子的音乐/美术课程，我们会给您寄去您所资助的孩子的作品集感谢信">150 元</button>
+									<button type="button" class="money-4000 btn btn-primary" data-toggle="tooltip" data-placement="top" title="4000元，认购100个孩子音乐/美术/舞蹈课程或是10个孩子的摄影课程，成为音画梦想vip俱乐部会员，更有机会参与音画梦想举办的13人the genius真人游戏当中">4000 元</button>
+									<button type="button" class="money-300 btn btn-primary" data-toggle="tooltip" data-placement="right" title="300元，认购一个孩子的舞蹈课程，我们会给您寄去您所资助的孩子的感谢信">300 元</button>
+									<button type="button" class="money-600 btn btn-primary" data-toggle="tooltip" data-placement="right" title="600元，认购一个孩子的摄影课程，我们会给您寄去您所资助的孩子的作品及感谢信">600 元</button>
+								</div>
+								<div class="visible-xs">
+									<dl class="dl-horizontal">
+										<dt>1</dt>
+										<dd>认购音画梦想一年电子刊物，我们会每半年给您邮箱寄去音画梦想电子刊物</dd>
+										<dt>150</dt>
+										<dd>认购一个孩子的音乐/美术课程，我们会给您寄去您所资助的孩子的作品集感谢信</dd>
+										<dt>300</dt>
+										<dd>认购一个孩子的舞蹈课程，我们会给您寄去您所资助的孩子的感谢信</dd>
+										<dt>600</dt>
+										<dd>认购一个孩子的摄影课程，我们会给您寄去您所资助的孩子的作品及感谢信</dd>
+										<dt>4000</dt>
+										<dd>认购100个孩子音乐/美术/舞蹈课程或是10个孩子的摄影课程，成为音画梦想vip俱乐部会员，更有机会参与音画梦想举办的13人the genius真人游戏当中</dd>
+									</dl>
+								</div>
+								<p>请在捐赠后，将您的姓名，捐赠截图及联系方式（包括手机、邮箱）发送至xingchen.wang@artdreamchina.org，以便于我们更快地与您联系。</p>
 							</div>
 						</div>
 					</div>
@@ -231,21 +239,35 @@
 						</div>
 					</div>
 				</div>
-				<div class="row ad-sup-project-way">
+				<div class="row ad-sup-project-way ad-sup-co">
 					<div class="col-md-8 col-md-offset-2 col-sm-offset-2">
 						<div class="panel panel-info">
 							<div class="panel-heading">合作方式</div>
 							<div class="panel-body">
-							如果你是：
-							基金会：如果您愿意与音画梦想进行项目合作或资助，共同在当地推广已开发的相关课程/服务，例如音画梦想音乐、美术、摄影和舞蹈等教材研发、流动儿童及留守儿童发展心理测评和音画梦想艺术课程等，或针对自身的某一现实需求委托音画梦想进行专业课程/服务研发； 教育部门：如果您愿意将音画梦想的专业课程/服务引入本地；
-							其他公益组织：如果您愿意与音画梦想合作，在您所服务区域和人群中开展我们已开发的相关艺术课程/服务；
-
-							联系我们：
-							电话：15201164378
-							邮箱：beijing@artdreamchina.org
-							新浪微博：@北京音画梦想社会工作事务所
-							微信公众号：artdreambeijing
-
+								<div class="ad-sup-co-ask">
+									<h4>如果你是：</h4>
+									<dl>
+									  <dt>基金会：</dt>
+									  <dd>如果您愿意与音画梦想进行项目合作或资助，共同在当地推广已开发的相关课程/服务，例如音画梦想音乐、美术、摄影和舞蹈等教材研发、流动儿童及留守儿童发展心理测评和音画梦想艺术课程等，或针对自身的某一现实需求委托音画梦想进行专业课程/服务研发。</dd>
+									  <dt>教育部门：</dt>
+									  <dd>如果您愿意将音画梦想的专业课程/服务引入本地。</dd>
+									  <dt>其他公益组织：</dt>
+									  <dd>如果您愿意与音画梦想合作，在您所服务区域和人群中开展我们已开发的相关艺术课程/服务。</dd>
+									</dl>
+								</div>
+								<div class="ad-sup-co-contact">
+									<h4>联系我们：</h4>
+									<dl>
+										<dt>电话：</dt>
+										<dd>15201164378</dd>
+										<dt>邮箱：</dt>
+										<dd>beijing@artdreamchina.org</dd>
+										<dt>新浪微博：</dt>
+										<dd>@北京音画梦想社会工作事务所</dd>
+										<dt>微信公众号：</dt>
+										<dd>artdreambeijing</dd>
+									</dl>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -284,16 +306,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="row ad-sup-enterprise-way">
+				<div class="row ad-sup-enterprise-way ad-sup-co">
 					<div class="col-md-8 col-md-offset-2 col-sm-offset-2">
 						<div class="panel panel-info">
 							<div class="panel-heading">合作方式</div>
 							<div class="panel-body">
-								如果您愿意支持中国教育，让更多的儿童获得音画梦想的艺术课程/服务，或者支持企业自身内部志愿者使用音画梦想的课程／产品进行志愿服务，请通过以下方式和我们取得联系：
-								电话：15201164378
-								邮箱：beijing@artdreamchina.org
-								新浪微博：@北京音画梦想社会工作事务所
-								微信公众号：artdreambeijing
+								<div class="ad-sup-co-ask">
+								如果您愿意支持中国教育，让更多的儿童获得音画梦想的艺术课程/服务，或者支持企业自身内部志愿者使用音画梦想的课程／产品进行志愿服务
+								</div>
+								<div class="ad-sup-co-contact">
+									<h4>联系我们：</h4>
+									<dl>
+										<dt>电话：</dt>
+										<dd>15201164378</dd>
+										<dt>邮箱：</dt>
+										<dd>beijing@artdreamchina.org</dd>
+										<dt>新浪微博：</dt>
+										<dd>@北京音画梦想社会工作事务所</dd>
+										<dt>微信公众号：</dt>
+										<dd>artdreambeijing</dd>
+									</dl>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -321,10 +354,8 @@
 							<div id="media-carousel-left" class="carousel-left"></div>
 							<div class="carousel-info">
 								<p id="media-carousel-alt" class="carousel-title"></p>
-								<!-- <p id="media-carousel-alt" class="carousel-content"></p> -->
 							</div>
 							<div id="media-carousel-right" class="carousel-right"></div>
-							
 						</div>
 					</div>
 					<div class="visible-xs">
@@ -337,16 +368,26 @@
 						</div>
 					</div>
 				</div>
-				<div class="row ad-sup-media-way">
+				<div class="row ad-sup-media-way ad-sup-co">
 					<div class="col-md-8 col-md-offset-2 col-sm-offset-2">
 						<div class="panel panel-info">
 							<div class="panel-heading">合作方式</div>
 							<div class="panel-body">
-								如果您对音画梦想的理念和工作认同并有兴趣深入了解，愿意帮助我们传播正能量，请通过以下方式和我们取得联系：
-								电话：15201164378
-								邮箱：beijing@artdreamchina.org
-								新浪微博：@北京音画梦想社会工作事务所
-								微信公众号：artdreambeijing
+								<div class="ad-sup-co-ask">
+								如果您对音画梦想的理念和工作认同并有兴趣深入了解，愿意帮助我们传播正能量。</div>
+								<div class="ad-sup-co-contact">
+									<h4>联系我们：</h4>
+									<dl>
+										<dt>电话：</dt>
+										<dd>15201164378</dd>
+										<dt>邮箱：</dt>
+										<dd>beijing@artdreamchina.org</dd>
+										<dt>新浪微博：</dt>
+										<dd>@北京音画梦想社会工作事务所</dd>
+										<dt>微信公众号：</dt>
+										<dd>artdreambeijing</dd>
+									</dl>
+								</div>
 							</div>
 						</div>
 					</div>
