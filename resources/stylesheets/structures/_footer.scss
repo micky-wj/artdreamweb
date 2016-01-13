@@ -1,3 +1,29 @@
 .footer{
 	background: $footer--bg;
+	padding:40px 0 50px;
+	color:$footer--c;
+	img{
+		width:100px;
+		height:100px;
+		margin:0 auto;
+		display: block;
+	}
+	ul{
+		border-right:1px solid $footer--c;
+		li{
+			line-height: 2;
+			text-align: center;
+			a{
+				color: $footer--c;
+				font-weight: lighter;
+			}
+		}
+	}
+	p{
+		margin-top: 10px;
+		line-height: 2;
+		i{
+			padding-right: 10px;
+		}
+	}
 }
