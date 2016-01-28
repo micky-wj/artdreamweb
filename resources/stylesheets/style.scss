@@ -12,6 +12,12 @@
 @import 'structures/title-content-m';
 @import 'structures/footer';
 
+//--------- parts file -----------//
+@import 'parts/project';
+@import 'parts/information';
+@import 'parts/support';
+@import 'parts/newslist';
+@import 'parts/newsdetail';
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

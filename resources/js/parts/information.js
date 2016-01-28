@@ -1,0 +1,17 @@
+$(document).ready(function(){
+	$(".annals").on("mouseenter",function(){
+		$(".annals-caption").slideDown();
+	});
+	$(".annals").on("mouseleave",function(){
+		$(".annals-caption").slideUp();
+	});
+	$(".finance").on("mouseenter",function(){
+		$(".finance-caption").slideDown();
+	});
+	$(".finance").on("mouseleave",function(){
+		$(".finance-caption").slideUp();
+	});
+	$(".annals-caption").on('click',function(){
+		window.location.href="../docs/annals.pdf";
+	})
+});
