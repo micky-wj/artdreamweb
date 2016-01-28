@@ -11,4 +11,7 @@ $(document).ready(function(){
 	$(".finance").on("mouseleave",function(){
 		$(".finance-caption").slideUp();
 	});
+	$(".annals-caption").on('click',function(){
+		window.location.href="../docs/annals.pdf";
+	})
 });

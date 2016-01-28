@@ -1,10 +1,11 @@
 $(document).ready(function(){
 	$(".ad-nav-spy").affix({
         offset: { 
-            top: $(".container").offset().top-100
+            top: $(".container").offset().top-100,
+            bottom: $('.footer').outerHeight(true) + 40
      	}
     });
-
+	
 	var containerCenter = $('.ad-sup-project-carousel').width()/2;
 	$(".ad-sup-project-carousel").CloudCarousel({			
 		xPos:containerCenter,
@@ -51,7 +52,7 @@ $(document).ready(function(){
 		bringToFront:true
 	});	
 	$('ad-sup-donate-way a').click(function (e) {
-	  	e.preventDefault()
+	  	e.preventDefault();
 	  	$(this).tab('show')
 	});
 	$('[data-toggle="tooltip"]').tooltip();

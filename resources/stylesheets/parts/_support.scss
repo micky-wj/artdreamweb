@@ -20,9 +20,9 @@ body{
 		left: 0;
 		top: 100px;
 		width: 120px;
-		.affix{
-	        top: 100px;
-	    }
+        .affix {
+            top: 100px;
+        }
 		li{
 			margin: 0;
 			a{
@@ -44,6 +44,7 @@ body{
 				color: #fff;
 				span.glyphicon{
 					display: inline-block;
+					color: #fff;
 				}
 			}
 		}
@@ -108,10 +109,10 @@ body{
 						background: #FF0D00;
 						color: #fff;
 					}
-					li:first-child.active a{
+					li.online.active a{
 						background: #00B7FF;
 					}
-					li:last-child.active a{
+					li.mail.active a{
 						background: #008738;
 					}
 					&.visible-xs li a{
@@ -259,6 +260,7 @@ body{
 			margin: 0 auto;
 			img {
 				box-shadow: 0 5px 10px #666;
+				border: 1px solid #ccc;
 				height:180px;
 				width:180px;
 			}
@@ -291,11 +293,11 @@ body{
 			}
 			.carousel-left {
 				right: 0;
-				background: url(../images/support_carousel_right.png) no-repeat;
+				background: url(../images/support/carousel_right.png) no-repeat;
 			}
 			.carousel-right {
 				left: 0;
-				background: url(../images/support_carousel_left.png) no-repeat;
+				background: url(../images/support/carousel_left.png) no-repeat;
 			}
 		}
 		.ad-sup-thumbs{
