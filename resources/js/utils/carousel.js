@@ -96,10 +96,11 @@
 		this.timeDelay = 1000/options.FPS;
 								
 		// Turn on the infoBox
-		if(options.altBox !== null)
+		if(options.infoBox !== null)
 		{
-			$(options.altBox).css('display','block');	
+			$(options.infoBox).css('display','block');	
 			$(options.titleBox).css('display','block');	
+			$(options.hrefBox).css('display','block');	
 		}
 		// Turn on relative position for container to allow absolutely positioned elements
 		// within it to work.
@@ -128,8 +129,9 @@
 			{
 					
 				clearTimeout(event.data.showFrontTextTimer);			
-				$(options.altBox).html( ($(event.target).attr('alt') ));
+				$(options.infoBox).html( ($(event.target).attr('info') ));
 				$(options.titleBox).html( ($(event.target).attr('title') ));							
+				$(options.hrefBox).html( ($(event.target).attr('news') ));							
 				if ( options.bringToFront && event.type == 'click' )				
 				{
 				
@@ -168,7 +170,8 @@
 		{	
 			if ( items[this.frontIndex] === undefined ) { return; }	// Images might not have loaded yet.
 			$(options.titleBox).html( $(items[this.frontIndex].image).attr('title'));
-			$(options.altBox).html( $(items[this.frontIndex].image).attr('alt'));				
+			$(options.hrefBox).html( $(items[this.frontIndex].image).attr('news'));
+			$(options.infoBox).html( $(items[this.frontIndex].image).attr('info'));				
 		};
 						
 		this.go = function()
@@ -323,8 +326,9 @@
 				yPos:0,
 				xRadius:0,
 				yRadius:0,
-				altBox:null,
 				titleBox:null,
+				hrefBox:null,
+				infoBox:null,
 				FPS: 30,
 				autoRotate: 'no',
 				autoRotateDelay: 1500,

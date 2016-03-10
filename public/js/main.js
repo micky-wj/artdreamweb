@@ -2364,23 +2364,6 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 $(document).ready(function(){
-	$(".annals").on("mouseenter",function(){
-		$(".annals-caption").slideDown();
-	});
-	$(".annals").on("mouseleave",function(){
-		$(".annals-caption").slideUp();
-	});
-	$(".finance").on("mouseenter",function(){
-		$(".finance-caption").slideDown();
-	});
-	$(".finance").on("mouseleave",function(){
-		$(".finance-caption").slideUp();
-	});
-	$(".annals-caption").on('click',function(){
-		window.location.href="../docs/annals.pdf";
-	})
-});
-$(document).ready(function(){
 	var newsCount = 23;
 	var newsPageCount = Math.ceil(newsCount/12);
 
@@ -2448,13 +2431,14 @@ $(document).ready(function(){
     });
 	
 	var containerCenter = $('.ad-sup-project-carousel').width()/2;
-	$(".ad-sup-project-carousel").CloudCarousel({			
+	$(".ad-sup-pro-c").CloudCarousel({			
 		xPos:containerCenter,
 		yPos:150,
-		buttonLeft: $('#project-carousel-left'),
-		buttonRight: $('#project-carousel-right'),
-		titleBox: $("#project-carousel-title"),				
-		altBox: $("#project-carousel-alt"),			
+		buttonLeft: $('.ad-sup-pro-cl'),
+		buttonRight: $('.ad-sup-pro-cr'),
+		titleBox: $(".ad-sup-pro-ct"),				
+		newsBox: $(".ad-sup-pro-cn"),			
+		infoBox: $(".ad-sup-pro-ci"),			
 		FPS:30,
 		reflHeight:0,
 		reflGap:0,
@@ -2463,27 +2447,14 @@ $(document).ready(function(){
 		speed:0.2,
 		bringToFront:true
 	});	
-	$(".ad-sup-enterprise-carousel").CloudCarousel({			
+	$(".ad-sup-enter-c").CloudCarousel({			
 		xPos:containerCenter,
 		yPos:150,
-		buttonLeft: $('#enterprise-carousel-left'),
-		buttonRight: $('#enterprise-carousel-right'),
-		altBox: $("#enterprise-carousel-alt"),
-		titleBox: $("#enterprise-carousel-title"),
-		FPS:30,
-		reflHeight:0,
-		reflGap:0,
-		yRadius:80,
-		autoRotateDelay: 1200,
-		speed:0.2,
-		bringToFront:true
-	});
-	$(".ad-sup-media-carousel").CloudCarousel({			
-		xPos:containerCenter,
-		yPos:100,
-		buttonLeft: $('#media-carousel-left'),
-		buttonRight: $('#media-carousel-right'),
-		altBox: $("#media-carousel-alt"),
+		buttonLeft: $('.ad-sup-enter-cl'),
+		buttonRight: $('.ad-sup-enter-cr'),
+		titleBox: $(".ad-sup-enter-ct"),				
+		newsBox: $(".ad-sup-enter-cn"),			
+		infoBox: $(".ad-sup-enter-ci"),			
 		FPS:30,
 		reflHeight:0,
 		reflGap:0,
@@ -2492,10 +2463,27 @@ $(document).ready(function(){
 		speed:0.2,
 		bringToFront:true
 	});	
-	$('ad-sup-donate-way a').click(function (e) {
-	  	e.preventDefault();
-	  	$(this).tab('show')
-	});
+	$(".ad-sup-med-c").CloudCarousel({			
+		xPos:containerCenter,
+		yPos:150,
+		buttonLeft: $('.ad-sup-med-cl'),
+		buttonRight: $('.ad-sup-med-cr'),
+		titleBox: $(".ad-sup-med-ct"),				
+		newsBox: $(".ad-sup-med-cn"),			
+		infoBox: $(".ad-sup-med-ci"),			
+		FPS:30,
+		reflHeight:0,
+		reflGap:0,
+		yRadius:80,
+		autoRotateDelay: 1200,
+		speed:0.2,
+		bringToFront:true
+	});	
+
+	// $('ad-sup-donate-way a').click(function (e) {
+	//   	e.preventDefault();
+	//   	$(this).tab('show')
+	// });
 	$('[data-toggle="tooltip"]').tooltip();
 });
 (function($) {
@@ -2596,10 +2584,11 @@ $(document).ready(function(){
 		this.timeDelay = 1000/options.FPS;
 								
 		// Turn on the infoBox
-		if(options.altBox !== null)
+		if(options.infoBox !== null)
 		{
-			$(options.altBox).css('display','block');	
+			$(options.infoBox).css('display','block');	
 			$(options.titleBox).css('display','block');	
+			$(options.hrefBox).css('display','block');	
 		}
 		// Turn on relative position for container to allow absolutely positioned elements
 		// within it to work.
@@ -2628,8 +2617,9 @@ $(document).ready(function(){
 			{
 					
 				clearTimeout(event.data.showFrontTextTimer);			
-				$(options.altBox).html( ($(event.target).attr('alt') ));
+				$(options.infoBox).html( ($(event.target).attr('info') ));
 				$(options.titleBox).html( ($(event.target).attr('title') ));							
+				$(options.hrefBox).html( ($(event.target).attr('news') ));							
 				if ( options.bringToFront && event.type == 'click' )				
 				{
 				
@@ -2668,7 +2658,8 @@ $(document).ready(function(){
 		{	
 			if ( items[this.frontIndex] === undefined ) { return; }	// Images might not have loaded yet.
 			$(options.titleBox).html( $(items[this.frontIndex].image).attr('title'));
-			$(options.altBox).html( $(items[this.frontIndex].image).attr('alt'));				
+			$(options.hrefBox).html( $(items[this.frontIndex].image).attr('news'));
+			$(options.infoBox).html( $(items[this.frontIndex].image).attr('info'));				
 		};
 						
 		this.go = function()
@@ -2823,8 +2814,9 @@ $(document).ready(function(){
 				yPos:0,
 				xRadius:0,
 				yRadius:0,
-				altBox:null,
 				titleBox:null,
+				hrefBox:null,
+				infoBox:null,
 				FPS: 30,
 				autoRotate: 'no',
 				autoRotateDelay: 1500,
