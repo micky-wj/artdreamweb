@@ -32,11 +32,24 @@ body {
 			margin: 0 10px;
 			font-size: 1.5em;
 		}
+		.btn {
+			float: right;
+			margin-top: 15px;
+		    border-radius: 30px;
+		    background: #eee;
+		    border: 2px solid #eee;
+		    color: #4FA3FB;
+		    font-weight: bold;
+		}
+		.btn:hover {
+		    background: #4FA3FB;
+		    color: #fff;
+		} 
 	}
 	.container {
 		padding: 30px 15px;
 	}
-	.panel{
+	.panel {
 		border-color: #ccc;
 		padding: 0;
 	}
@@ -56,21 +69,19 @@ body {
 		height: 450px;
 		overflow: hidden;
 	}
-	.carousel-img {		
+	.cloudcarousel {		
 		border: 1px solid #ccc;
-		height:180px;
-		width:180px;
+		height: 180px;
+		width: 180px;
 		box-shadow: 0 5px 10px #666;
 	}
-	.carousel-content {
-		margin: 0 20px;
-	}
 	.carousel-title {
-		margin-bottom: 3px;
-		line-height: 2em;
-		text-align: center;		
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
 		font-size: 1.2em;
-		font-weight: bold;	
+		font-weight: bold;
+		border-radius: 20px;
 	}
 	.carousel-left, .carousel-right {
 		position: absolute;
@@ -96,10 +107,26 @@ body {
 		img {
 			margin: 2%;
 			border: 1px solid #286090;
-			width: 20%;		
+			width: 20%;
 		}
 	}
-	#donate{
+	.coop-way {
+		line-height: 1.5em;
+		h4 {
+			font-weight: bold;
+			color: #286090;
+		}
+		dl {
+			margin-left: 1%;
+		}
+		dt {
+		    float: left;
+		}
+		dd {
+			margin-bottom: 6px;
+		}
+	}
+	#donate {
 		.intro{
 			margin-bottom: 20px;
 			line-height: 1.8em;
@@ -123,13 +150,13 @@ body {
 				background: #FF0D00;
 				color: #fff;
 			}
-			li.online.active a{
+			li.online.active a {
 				background: #00B7FF;
 			}
-			li.mail.active a{
+			li.mail.active a {
 				background: #008738;
 			}
-			.nav.visible-xs li a{
+			.nav.visible-xs li a {
 				padding: 6px 10px;
 			}
 			.tab-pane {
@@ -164,61 +191,52 @@ body {
 			}
 		}
 		.money {
-			word-break: break-all;
-			.hidden-xs {
-				position: relative;
+			.slogan {
+				color: #aaa;
+			}
+			.moneylist {
+				width: 100%;
+				background: #fff;
+				overflow: hidden;
+			}
+			.money-container {
+				padding: 10px;
+			}
+			.content {
+			    margin: 0px;
+			    border: 1px solid #999;
+			    padding: 4px;
+			    height: 220px;
+			    border-radius: 4px;
+			    overflow: hidden;
+			    cursor: pointer;
+			    
+			}
+			.content:hover {
+				img {
+					height: 130px;
+				}
 			}
 			img {
-				display: block;
-				width: 120px;
-				margin: 60px auto 20px;
+				margin: 0 auto;
+				width: 100%;
+				height: 180px;
+				-webkit-transition: all 0.2s ease-in-out;
+			    -o-transition: all 0.2s ease-in-out;
+			    transition: all 0.2s ease-in-out;
 			}
-			.btn {
-				position: absolute;
-				width: 70px;
-				&.money-1 {
-					left: 50%;
-					top: 10px;
-					margin-left: -150px;
-				}
-				&.money-150 {
-					left: 50%;
-					top: 70px;
-					margin-left: -150px;
-				}
-				&.money-300 {
-					left: 50%;
-					top: 10px;
-					margin-left: 80px;
-				}
-				&.money-600 {
-					left: 50%;
-					top: 70px;
-					margin-left: 80px;
-				}
-				&.money-4000 {
-					left: 50%;
-					top: -50px;
-					margin-left: -35px;
-				}
+			h4 {
+				margin-top: 3px;
+				text-align: center;
+			 	line-height: 25px;
+			 	font-size: 1em;
+			 	b {
+			 		color: #286090;
+			 	}
 			}
-			.tooltip {
-				font-size: .9em;
-				font-family: "Microsoft YaHei";
+			p {
+				margin-top: 10px;
 			}
-			dt {
-			    float: left;
-			    width: 50px;
-			    height: 30px;
-			    line-height: 30px;
-			    background: #FFEB3B;
-			    border-radius: 4px;
-			    text-align: center;
-			}
-			dd {
-				margin-bottom: 6px;
-				margin-left: 60px
-			}			
 		}
 		.problem {
 			ul {
@@ -268,48 +286,20 @@ body {
 				height: 10px;
 			}
 		}
-	}	
-	.ad-sup-co{
-		line-height: 1.5em;
-		h4{
-			font-weight: bold;
-			color: #286090;
-		}
-		dl{
-			margin-left: 1%;
-			dt{
-			    float: left;
-			}
-			dd{
-				margin-bottom: 6px;
-			}
+	}
+	#project {
+		.carousel-title {
+			background: #F9E98B;
 		}
 	}		
-	#enterprise{
-		.carousel {
-			.carousel-info{
-				background: #F2E7E7;
-			}
-		}
-		.thumbs{
-			img{
-				width: 26%;
-				margin: 3%;
-			}
+	#enterprise {
+		.carousel-title {
+			background: #F2E7E7;
 		}
 	}
-	#media{
-		.carousel {
-			.carousel-info{
-				background: #dff0d8;
-				height: 40px;
-			}
-		}
-		.thumbs{
-			img{
-				width: 16%;
-				margin: 1%;
-			}
+	#media {
+		.carousel-title {
+			background: #dff0d8;
 		}
 	}
 }

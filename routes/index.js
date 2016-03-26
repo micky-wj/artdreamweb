@@ -36,4 +36,34 @@ router.get('/news/:id', function(req, res, next) {
   res.render('news_'+req.params.id);
 });
 
+/* GET procooplist page. */
+router.get('/procooplist/:id', function(req, res, next) {
+  res.render('procooplist_'+req.params.id);
+});
+
+/* GET procooplist default page. */
+router.get('/procooplist', function(req, res, next) {
+  res.render('procooplist_p1');
+});
+
+/* GET entercooplist page. */
+router.get('/entercooplist/:id', function(req, res, next) {
+  res.render('entercooplist_'+req.params.id);
+});
+
+/* GET entercooplist default page. */
+router.get('/entercooplist', function(req, res, next) {
+  res.render('entercooplist_p1');
+});
+
+/* GET mediacooplist page. */
+router.get('/mediacooplist/:id', function(req, res, next) {
+  res.render('mediacooplist_'+req.params.id);
+});
+
+/* GET procooplistlist default page. */
+router.get('/mediacooplist', function(req, res, next) {
+  res.render('mediacooplist_p1');
+});
+
 module.exports = router;

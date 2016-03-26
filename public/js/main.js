@@ -2404,19 +2404,14 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
 
-	$('.ad-pro-core-detail a').click(function (e) {
-	  	e.preventDefault()
-	  	$(this).tab('show')
-	});
-
-	var	$activityList= $('.ad-pro-activity-list');
+	var	$activityList= $('.ad-pro #activity .newslist');
 	$activityList.on('click', '.news-container', function(event) {
 		var $news = $(event.currentTarget);
 		var newsId = parseInt($news.attr('id').replace(/news/, ''));
 		window.location.href="/news/"+newsId;
 	});
 
-	var	$activityMore= $('.ad-pro-activity-more .btn');
+	var	$activityMore= $('.ad-pro #activity .btn');
 	$activityMore.on('click', function(event) {
 		window.location.href="/newslist/p1";
 	});
@@ -2430,15 +2425,13 @@ $(document).ready(function(){
      	}
     });
 	
-	var containerCenter = $('.ad-sup-project-carousel').width()/2;
-	$(".ad-sup-pro-c").CloudCarousel({			
+	var containerCenter = $('.ad-sup-pro-c').width()/2;
+	$(".ad-sup-pro-c").CloudCarousel({
 		xPos:containerCenter,
-		yPos:150,
+		yPos:100,
 		buttonLeft: $('.ad-sup-pro-cl'),
 		buttonRight: $('.ad-sup-pro-cr'),
-		titleBox: $(".ad-sup-pro-ct"),				
-		newsBox: $(".ad-sup-pro-cn"),			
-		infoBox: $(".ad-sup-pro-ci"),			
+		altBox: $(".ad-sup-pro-ct"),
 		FPS:30,
 		reflHeight:0,
 		reflGap:0,
@@ -2447,14 +2440,12 @@ $(document).ready(function(){
 		speed:0.2,
 		bringToFront:true
 	});	
-	$(".ad-sup-enter-c").CloudCarousel({			
+	$(".ad-sup-enter-c").CloudCarousel({
 		xPos:containerCenter,
-		yPos:150,
+		yPos:100,
 		buttonLeft: $('.ad-sup-enter-cl'),
 		buttonRight: $('.ad-sup-enter-cr'),
-		titleBox: $(".ad-sup-enter-ct"),				
-		newsBox: $(".ad-sup-enter-cn"),			
-		infoBox: $(".ad-sup-enter-ci"),			
+		altBox: $(".ad-sup-enter-ct"),
 		FPS:30,
 		reflHeight:0,
 		reflGap:0,
@@ -2463,14 +2454,12 @@ $(document).ready(function(){
 		speed:0.2,
 		bringToFront:true
 	});	
-	$(".ad-sup-med-c").CloudCarousel({			
+	$(".ad-sup-med-c").CloudCarousel({
 		xPos:containerCenter,
-		yPos:150,
+		yPos:100,
 		buttonLeft: $('.ad-sup-med-cl'),
 		buttonRight: $('.ad-sup-med-cr'),
-		titleBox: $(".ad-sup-med-ct"),				
-		newsBox: $(".ad-sup-med-cn"),			
-		infoBox: $(".ad-sup-med-ci"),			
+		altBox: $(".ad-sup-med-ct"),
 		FPS:30,
 		reflHeight:0,
 		reflGap:0,
@@ -2478,13 +2467,7 @@ $(document).ready(function(){
 		autoRotateDelay: 1200,
 		speed:0.2,
 		bringToFront:true
-	});	
-
-	// $('ad-sup-donate-way a').click(function (e) {
-	//   	e.preventDefault();
-	//   	$(this).tab('show')
-	// });
-	$('[data-toggle="tooltip"]').tooltip();
+	});
 });
 (function($) {
 
@@ -2584,11 +2567,10 @@ $(document).ready(function(){
 		this.timeDelay = 1000/options.FPS;
 								
 		// Turn on the infoBox
-		if(options.infoBox !== null)
+		if(options.altBox !== null)
 		{
-			$(options.infoBox).css('display','block');	
+			$(options.altBox).css('display','block');	
 			$(options.titleBox).css('display','block');	
-			$(options.hrefBox).css('display','block');	
 		}
 		// Turn on relative position for container to allow absolutely positioned elements
 		// within it to work.
@@ -2617,9 +2599,8 @@ $(document).ready(function(){
 			{
 					
 				clearTimeout(event.data.showFrontTextTimer);			
-				$(options.infoBox).html( ($(event.target).attr('info') ));
+				$(options.altBox).html( ($(event.target).attr('alt') ));
 				$(options.titleBox).html( ($(event.target).attr('title') ));							
-				$(options.hrefBox).html( ($(event.target).attr('news') ));							
 				if ( options.bringToFront && event.type == 'click' )				
 				{
 				
@@ -2658,8 +2639,7 @@ $(document).ready(function(){
 		{	
 			if ( items[this.frontIndex] === undefined ) { return; }	// Images might not have loaded yet.
 			$(options.titleBox).html( $(items[this.frontIndex].image).attr('title'));
-			$(options.hrefBox).html( $(items[this.frontIndex].image).attr('news'));
-			$(options.infoBox).html( $(items[this.frontIndex].image).attr('info'));				
+			$(options.altBox).html( $(items[this.frontIndex].image).attr('alt'));				
 		};
 						
 		this.go = function()
@@ -2814,9 +2794,8 @@ $(document).ready(function(){
 				yPos:0,
 				xRadius:0,
 				yRadius:0,
+				altBox:null,
 				titleBox:null,
-				hrefBox:null,
-				infoBox:null,
 				FPS: 30,
 				autoRotate: 'no',
 				autoRotateDelay: 1500,
